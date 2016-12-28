@@ -1,0 +1,26 @@
+/* Reset */
+ul{
+	margin:0;
+	padding: 0;
+}
+ul li{
+	list-style-type: none;
+}
+.navbar-default{
+	background-color: #fff;
+}
+.navbar-brand{
+	padding: 3px;
+}
+footer{
+	background-color: #fff;
+}
+footer .bottom{
+	padding:10px 0;
+}
+footer i{
+	font-size: 30px !important;
+}
+.wireframe-cont{
+	min-height: 800px;
+}
