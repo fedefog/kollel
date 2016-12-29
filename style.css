@@ -1,4 +1,4 @@
-/* Reset */
+/* GENERAL RESET */
 ul{
 	margin:0;
 	padding: 0;
@@ -6,21 +6,75 @@ ul{
 ul li{
 	list-style-type: none;
 }
-.navbar-default{
+
+
+/* HEADER */
+header .navbar-default{
 	background-color: #fff;
 }
-.navbar-brand{
+header .navbar-brand{
 	padding: 3px;
 }
+
+
+
+/* MAIN CONTENT */
+main.wireframe-cont{
+	min-height: 800px;
+}
+
+
+/* FIRST ROW */
+section#first-row{
+	background-color: #dadada;
+	padding: 40px 0;
+	color: gray;
+	text-align: center;
+}
+section#first-row h1{
+	margin-top:0;
+}
+section#first-row .kollel-info{
+	margin: 20px 0 60px 0;
+}
+section#first-row .kollel-info span{
+	margin-left: 10px;
+}
+section#first-row .kollel-info img{
+	max-width: 37px;
+}
+
+/* SECOND ROW */
+section#second-row{
+	padding: 40px 0;
+}
+section#second-row .social-share{
+	text-align: center;
+}
+section#second-row .social-share a{
+	margin: 0 15px;
+	width: 120px;
+}
+
+
+/* FOOTER */
 footer{
 	background-color: #fff;
 }
+footer i.fa{
+	font-size: 30px;
+}
+footer .icon{
+	float: left;
+	margin-right: 10px;
+}
+footer .info p{
+	margin:0;
+}
+footer .contact{
+	margin-bottom: 10px;
+}
 footer .bottom{
-	padding:10px 0;
-}
-footer i{
-	font-size: 30px !important;
-}
-.wireframe-cont{
-	min-height: 800px;
+	padding-top:10px;
+	padding-bottom:10px;
 }
