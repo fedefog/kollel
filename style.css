@@ -6,6 +6,9 @@ ul{
 ul li{
 	list-style-type: none;
 }
+.td{
+	display: table-cell;
+}
 
 
 /* HEADER */
@@ -47,15 +50,114 @@ section#first-row .kollel-info img{
 /* SECOND ROW */
 section#second-row{
 	padding: 40px 0;
+	background-color: #f3f2f2;
 }
 section#second-row .social-share{
 	text-align: center;
 }
 section#second-row .social-share a{
-	margin: 0 15px;
+	margin: 0 5px;
 	width: 120px;
 }
-
+section#second-row .donate{
+	background-color: #fff;
+	margin-top: -40px; // Transitorio
+	border-radius: 5px;
+	padding: 30px;
+}
+section#second-row .donate .date{
+	overflow:hidden;
+	margin-bottom: 25px;
+}
+section#second-row .donate .date span{
+	display: block;
+}
+section#second-row .donate .date .start{
+	float: left;
+}
+section#second-row .donate .date .end{
+	float: right;
+}
+section#second-row .donate .money-obj{
+	margin-bottom: 25px;
+}
+section#second-row .donate .money-obj ul li{
+	display: inline-block;
+	margin-right: -4px; /* This will fix the 4px inline-block gap with 33.333% width*/
+	width: 33.333%;
+}
+section#second-row .donate .money-obj ul li p{
+	margin: 0;
+}
+section#second-row .donate .money-obj ul li  .money{
+	font-size: 22px;
+	font-weight: bold;
+}
+section#second-row .donate .time-left{
+	margin-bottom: 25px;
+}
+section#second-row .donate .time-left ul{
+	text-align: center;
+}
+section#second-row .donate .time-left ul li{
+	display: inline-block;
+	text-transform: uppercase;
+	margin: 0 5px;
+}
+section#second-row .donate .time-left ul li:first-child{
+	vertical-align: top;
+	margin-left: -90px; //Transitorio
+}
+section#second-row .donate .time-left ul li .number-box{
+    display: block;
+    background-color: #e6e5e5;
+    border: 1px solid #b9b9b9;
+    padding: 5px 13px;
+    border-radius: 9px;
+}
+section#second-row .donate .progress-bar-info{
+	width: 50%;
+}
+section#second-row .donate .progress-info{
+	text-transform: uppercase;
+	text-align: center;
+}
+section#second-row .donate a{
+	display: block;
+	width: 100%;
+	padding: 15px 0 ;
+}
+section#second-row .latest-donations h3{
+	text-align: center;
+}
+section#second-row .latest-donations .donations-list .top-donation-list{
+	border-bottom: 1px solid gray;
+	padding: 10px 0;
+	margin-bottom: 10px;
+}
+section#second-row .latest-donations .donations-list .row-donation-list{
+	margin-bottom: 30px;
+}
+section#second-row .latest-donations .donations-list .averchim-info{
+	width: 80%;
+}
+section#second-row .latest-donations .donations-list .money{
+	width: 20%;
+}
+section#second-row .latest-donations .donations-list .averchim-info .name{
+	font-weight: bold;
+}
+section#second-row .latest-donations .donations-list .averchim-info .message{
+	display: block;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 5px;
+}
+section#second-row .social-share,section#second-row .donors{
+	border-top: 1px solid gray;
+	padding: 20px 0;
+}
 
 /* FOOTER */
 footer{
