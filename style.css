@@ -11,6 +11,9 @@ ul{
 ul li{
 	list-style-type: none;
 }
+input:focus{
+  outline: none;
+}
 .td{
 	display: table-cell;
 }
@@ -21,6 +24,7 @@ ul li{
   width: 100%;
   cursor: pointer;
   text-align: center;
+  display: inline-block;
 }
 .btn-social{
   font-size: 14px;
@@ -62,11 +66,18 @@ ul li{
   border: 1px solid #CECECE;
 }
 /* Generals */
-
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
 .center{
   text-align: center;
 }
-
+.rounded{
+  border-radius: 8px;
+}
 /* HEADER */
 header .navbar-default{
 	background-color: #fff;
@@ -552,6 +563,11 @@ Main components
   .cd-timeline-content p {
     font-size: 14px;
   }
+
+  /* MODAL*/
+   #donate-modal .modal-dialog{
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-content {
@@ -835,6 +851,158 @@ Main components
   content: "";
   background:#e0e0e0;
 }
+
+/* MODAL */
+#donate-modal .modal-content{
+  padding: 60px 30px;
+}
+#donate-modal .donate-modal-content{
+  border: 1px solid #DDDDDD;
+}
+#donate-modal button.close{
+  position: relative;
+  top:-70px;
+  left: 32px;
+  font-size: 30px;
+}
+#donate-modal .modal-header{
+  background: #F9F9F9;
+}
+#donate-modal .steps-timeline{
+  width: 450px;
+  margin:0 auto;
+  position: relative;
+}
+#donate-modal .steps-timeline:before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: #C0C0C0;
+  top:50%;
+  left: 0;
+  z-index: 0;
+}
+#donate-modal .steps-timeline span.bullet{
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+  background: #C0C0C0;
+  display: inline-block;
+  text-align: center;
+  padding-top: 8px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-weight: 600;
+}
+#donate-modal .steps-timeline span.bullet.active{
+  border:4px solid #ADACAC;
+}
+#donate-modal .modal-body{
+  padding: 30px 40px;
+}
+#donate-modal .modal-body #step-one{
+  color: #9B9B9B;
+}
+#donate-modal .modal-body #step-one h1{
+  text-align: center;
+  font-size: 23px;
+  font-weight: 600;
+  position: relative;
+  margin-top: 0;
+}
+#donate-modal .modal-body #step-one h1:after{
+  content: "";
+  position: absolute;
+  width: 260px;
+  bottom: -16px;
+  left: 37%;
+  height: 1px;
+  background: #C6C4C4;
+}
+#donate-modal .modal-body #step-one .donate-cta-box{
+  margin-top: 40px;
+  background: #F9F9F9;
+  border: 1px solid #DDDDDD;
+  padding: 18px;
+}
+#donate-modal .modal-body #step-one .donate-cta-box .col-md-6 input{
+  background: none;
+  border: none;
+  border-bottom: 1px solid;
+}
+#donate-modal .modal-body #step-one .donate-cta-box .col-md-6{
+  text-align: center;
+}
+#donate-modal .modal-body #step-one .donate-cta-box .col-md-6 span:first-child{
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #9B9B9B;
+  display: inline-block;
+}
+#donate-modal .modal-body #step-one .donate-cta-box .col-md-6 span:last-child{
+  display: block;
+  padding-top: 18px;
+}
+#donate-modal .modal-body #step-one .donate-cta-box .col-md-4 a{
+  margin-top: 7px;
+}
+#donate-modal .modal-body #step-one .options-box{
+  margin-top: 30px;
+  border: 1px solid #DDDDDD;
+}
+#donate-modal .modal-body #step-one .options-box h3{
+  border-bottom: 1px solid #DDDDDD;
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+}
+#donate-modal .modal-body #step-one .options-box ul li{
+  border-bottom: 1px solid #DDDDDD;
+  overflow: auto; /* Hack to floated elements */
+  cursor: pointer;
+}
+#donate-modal .modal-body #step-one .options-box ul li:hover .radio span{
+  background: #B1CCF4;
+}
+#donate-modal .modal-body #step-one .options-box ul li:last-child{
+  border: none;
+}
+#donate-modal .modal-body #step-one .options-box ul li:last-child .radio{
+  border-radius: 0 0 0 8px;
+}
+#donate-modal .modal-body #step-one .options-box .radio,
+#donate-modal .modal-body #step-one .options-box .sponsor{
+  float: left;
+  margin:0;
+}
+#donate-modal .modal-body #step-one .options-box .sponsor{
+  padding: 20px 0 20px 50px;
+}
+#donate-modal .modal-body #step-one .options-box .radio{
+  position: relative;
+  background: #F4F4F4;
+  width: 120px;
+  padding:30px 0;
+}
+#donate-modal .modal-body #step-one .options-box .radio span{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top:50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+  background: #fff;
+}
+
 
 
 @media screen and (min-width: 768px) {
