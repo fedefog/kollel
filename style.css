@@ -852,7 +852,25 @@ Main components
   background:#e0e0e0;
 }
 
-/* MODAL */
+/* ------MODAL------- */
+#donate-modal .modal-body h1{
+  text-align: center;
+  font-size: 23px;
+  font-weight: 600;
+  position: relative;
+  margin-top: 0;
+}
+#donate-modal .modal-body h1:after{
+  content: "";
+  position: absolute;
+  width: 260px;
+  bottom: -16px;
+  left: 37%;
+  height: 1px;
+  background: #C6C4C4;
+}
+
+/* Generals */
 #donate-modal .modal-content{
   padding: 60px 30px;
 }
@@ -902,24 +920,13 @@ Main components
 #donate-modal .modal-body{
   padding: 30px 40px;
 }
+
+/* Step ONE*/
+#donate-modal .modal-body #step-one{
+  display: none;
+}
 #donate-modal .modal-body #step-one{
   color: #9B9B9B;
-}
-#donate-modal .modal-body #step-one h1{
-  text-align: center;
-  font-size: 23px;
-  font-weight: 600;
-  position: relative;
-  margin-top: 0;
-}
-#donate-modal .modal-body #step-one h1:after{
-  content: "";
-  position: absolute;
-  width: 260px;
-  bottom: -16px;
-  left: 37%;
-  height: 1px;
-  background: #C6C4C4;
 }
 #donate-modal .modal-body #step-one .donate-cta-box{
   margin-top: 40px;
@@ -1003,7 +1010,13 @@ Main components
   background: #fff;
 }
 
-
+/* STEP TWO */
+#donate-modal .modal-body #step-two .avreichim-list{
+  border: 1px solid gray;
+}
+#donate-modal .modal-body #step-two .avreichim-list .avreichim-data span{
+  display: block;
+}
 
 @media screen and (min-width: 768px) {
   #tab-opportunities .avreichim-info span{
