@@ -15,6 +15,57 @@ ul li{
 	display: table-cell;
 }
 
+/* Buttons */
+.k-btn{
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+.btn-social{
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding:12px 20px;
+}
+.b-fb{
+  background: #BFBFBF;
+  border: 1px solid #BFBFBF;
+  color: #fff;
+}
+.b-tw{
+  background: #D1D1D1;
+  border: 1px solid #D1D1D1;
+  color: #fff;
+}
+.b-email{
+  border: 1px solid #979797;
+  color: #868D92;
+}
+.btn-donate{
+  text-transform: uppercase;
+  background: #BFBFBF;
+  padding: 15px 0;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+.btn-donate:hover{
+  text-decoration: none;
+  color: #fff;
+}
+.btn-more{
+  background: #F8F8F8;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px 50px;
+  font-weight: 400;
+  border: 1px solid #CECECE;
+}
+/* Generals */
+
+.center{
+  text-align: center;
+}
 
 /* HEADER */
 header .navbar-default{
@@ -53,6 +104,13 @@ section#first-row .kollel-info img{
 }
 
 /* SECOND ROW */
+
+.about-info p{
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
 section#second-row{
 	padding: 40px 0;
 	background-color: #f3f2f2;
@@ -62,13 +120,17 @@ section#second-row .social-share{
 }
 section#second-row .social-share a{
 	margin: 0 5px;
-	width: 120px;
+	width: 115px;
+  display: inline-block;
 }
 section#second-row .donate{
 	background-color: #fff;
 	margin-top: -40px; // Transitorio
 	border-radius: 5px;
 	padding: 30px;
+  box-shadow: 0px 17px 24px 0px rgba(0,0,0,0.07);
+  margin-bottom: 37px;
+
 }
 section#second-row .donate .date{
 	overflow:hidden;
@@ -132,34 +194,63 @@ section#second-row .donate a{
 	width: 100%;
 	padding: 15px 0 ;
 }
-section#second-row .latest-donations h3{
+.latest-donations h3{
 	text-align: center;
 }
-section#second-row .latest-donations .donations-list .top-donation-list{
+.latest-donations .donations-list .top-donation-list{
 	border-bottom: 1px solid gray;
 	padding: 10px 0;
 	margin-bottom: 10px;
 }
-section#second-row .latest-donations .donations-list .row-donation-list{
-	margin-bottom: 30px;
+.latest-donations .donations-list .row-donation-list{
+	padding-bottom: 30px;
 }
-section#second-row .latest-donations .donations-list .averchim-info{
+.latest-donations .donations-list .averchim-info{
 	width: 80%;
 }
-section#second-row .latest-donations .donations-list .money{
+.latest-donations .donations-list .money{
 	width: 20%;
+  text-align: right;
 }
-section#second-row .latest-donations .donations-list .averchim-info .name{
+.latest-donations .donations-list .averchim-info .name{
 	font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1.3px;
+  margin-right: 10px;
 }
-section#second-row .latest-donations .donations-list .averchim-info .message{
+.latest-donations .donations-list .averchim-info .name:before{
+  content: "·";
+  padding-right: 5px;
+}
+.latest-donations .donations-list .avreichim-detail{
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.latest-donations .donations-list .averchim-info .message{
 	display: block;
 	background-color: #fff;
 	border-radius: 5px;
-	padding: 5px;
 	margin-top: 5px;
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 0.4px;
+  padding: 6px;
 }
-section#second-row .social-share,section#second-row .donors{
+.latest-donations .donation-info{
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.1px;
+  overflow: auto; /* Hack container with floated elements */
+  margin-bottom: 20px;
+}
+.latest-donations .donation-info span.donors{
+  font-weight: bold;
+}
+.latest-donations .donation-info span.donors:after{
+  padding:0 5px;
+  content: "·";
+}
+section#second-row .social-share,section#second-row .all-donors{
 	border-top: 1px solid gray;
 	padding: 20px 0;
 }
@@ -181,7 +272,28 @@ section#second-row .social-share,section#second-row .donors{
 
 Modules - reusable parts of our design
 
+
+
 -------------------------------- */
+
+#third-row .tab-content .tab-pane{
+  margin-top:50px;
+}
+
+#third-row .nav-tabs>li{
+  width: 33.33%;
+  text-align: center;
+  letter-spacing: 0.92px
+}
+#third-row .nav-tabs>li a{
+  color: #6B7175;
+}
+#third-row .nav-tabs>li.active a{
+  border: none;
+  border-bottom: 6px solid #DADADA;
+  background-color: inherit;
+}
+
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
@@ -204,6 +316,21 @@ Main components
 .cd-timeline-block{
 	color: #868D92;
 }
+.cd-timeline-block .likes{
+  position: absolute;
+  bottom:-30px;
+  letter-spacing: 1.38px;
+}
+.cd-timeline-block .likes i{
+  margin-right: 10px;
+}
+.cd-timeline-block:nth-child(odd) .likes{
+  left: 0;
+}
+.cd-timeline-block:nth-child(even) .likes{
+  right: 0;
+}
+
 .cd-timeline-content p{
 	font-weight: 300;
 	letter-spacing: 0.53px;
@@ -238,6 +365,7 @@ Main components
 }
 
 /* ! Estilos sin Responsive */
+
 #cd-timeline {
   position: relative;
   padding: 2em 0;
@@ -267,7 +395,7 @@ Main components
 
 .cd-timeline-block {
   position: relative;
-  margin: 2em 0;
+  margin: 4em 0;
 }
 .cd-timeline-block:after {
   content: "";
@@ -585,7 +713,7 @@ Main components
 }
 
 
-/* SECOND PANNEL */
+/* TAB WE NEED YOUR HELP */
 #tab-need-your-help .help-items{
 	background-color: #fff;
 	margin-bottom: 20px;
@@ -637,7 +765,90 @@ Main components
 	font-size: 20px;
 	letter-spacing: 1.45px;
 	line-height: 27px;
-}    
+}
+
+
+
+/* TAB OPPORTUNITIES */
+#tab-opportunities .avreichim-box{
+  background-color: #fff;
+  border: 1px solid #D8D8D8;
+  max-height: 223px;
+  margin-bottom: 23px;
+  width: 100%;
+}
+#tab-opportunities .avreichim-img, #tab-opportunities .avreichim-info{
+  display: table-cell;
+  vertical-align: top;
+}
+#tab-opportunities .avreichim-info{
+  background: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#tab-opportunities .avreichim-info span{
+  display: block;
+  line-height: 20px;
+  letter-spacing: 0.38px;
+  font-size: 13px;
+}
+#tab-opportunities .avreichim-info .name{
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.64px;
+}
+#tab-opportunities .avreichim-info .item-content .money{
+  display: block;
+  font-size: 20px;
+  letter-spacing: 1.45px;
+  line-height: 27px;
+}
+#tab-opportunities .avreichim-info .item-content .funded{
+  font-size: 20px;
+}
+#tab-opportunities .avreichim-info .item-content .progress{
+  height: 10px;
+  margin-bottom: 10px;
+}
+#tab-opportunities .avreichim-info .item-content .progress-info{
+  text-transform: uppercase;
+  font-size: 9px;
+}
+#tab-opportunities .avreichim-info .item-content ul{
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+#tab-opportunities .avreichim-info .item-content ul li{
+  position: relative;
+  list-style-type: none;
+  display: inline-block;
+  width: 50%;
+  margin-right: -4px; //Hack for inline block
+  letter-spacing: 0.92px;
+}
+#tab-opportunities .avreichim-info .item-content ul li:first-child:after{
+  position: absolute;
+  top:0;
+  right: 12px;
+  height: 100%;
+  width: 1px;
+  content: "";
+  background:#e0e0e0;
+}
+
+
+@media screen and (min-width: 768px) {
+  #tab-opportunities .avreichim-info span{
+    max-height: 40px;
+    overflow: hidden; 
+  }
+  #tab-opportunities .avreichim-info{
+    width: 60%;
+  }
+  #tab-opportunities .avreichim-img{
+    width: 40%;
+  }
+}
 
 /* FOOTER */
 footer{
