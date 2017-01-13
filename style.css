@@ -78,6 +78,9 @@ input:focus{
 .rounded{
   border-radius: 8px;
 }
+.half-rounded{
+  border-radius: 4px;
+}
 /* HEADER */
 header .navbar-default{
 	background-color: #fff;
@@ -1011,13 +1014,55 @@ Main components
 }
 
 /* STEP TWO */
+#donate-modal .modal-body #step-two{
+  //display: none;
+  overflow: auto;
+}
+#donate-modal .modal-body #step-two .boxes-container{
+  margin-top: 30px;
+}
+#donate-modal .modal-body #step-two .list-table{
+  display: table;
+  width: 100%;
+}
 #donate-modal .modal-body #step-two .avreichim-list{
   border: 1px solid gray;
+  text-align: center;
+}
+#donate-modal .modal-body #step-two .avreichim-row, #donate-modal .modal-body #step-two .heading-row{
+  display: table-row;
+  width: 100%;
+}
+#donate-modal .modal-body #step-two .heading-row{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 1px;
 }
 #donate-modal .modal-body #step-two .avreichim-list .avreichim-data span{
   display: block;
 }
+#donate-modal .modal-body #step-two .avreichim-select,
+#donate-modal .modal-body #step-two .more-info{
+  width: 10%;
+}
+#donate-modal .modal-body #step-two .avreichim-data{
+  width: 50%;
+  text-align: left;
+}
+#donate-modal .modal-body #step-two .avreichim-data .name{
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 1.4px;
+}
+#donate-modal .modal-body #step-two .avreichim-data .place{
+  font-size: 11px;
+  letter-spacing: 1px;
+}
 
+#donate-modal .modal-body #step-two .cost, #donate-modal .modal-body #step-two .time{
+width: 15%;
+}
 @media screen and (min-width: 768px) {
   #tab-opportunities .avreichim-info span{
     max-height: 40px;
