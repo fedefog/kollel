@@ -16,6 +16,7 @@ input:focus{
 }
 .td{
 	display: table-cell;
+  vertical-align: middle;
 }
 
 /* Buttons */
@@ -1021,10 +1022,6 @@ Main components
 #donate-modal .modal-body #step-two .boxes-container{
   margin-top: 30px;
 }
-#donate-modal .modal-body #step-two .list-table{
-  display: table;
-  width: 100%;
-}
 #donate-modal .modal-body #step-two .avreichim-list{
   border: 1px solid #DDDDDD;
   text-align: center;
@@ -1032,15 +1029,13 @@ Main components
 #donate-modal .modal-body #step-two .avreichim-list h4{
   border-bottom: 1px solid #DDDDDD;
 }
-#donate-modal .modal-body #step-two .avreichim-row, #donate-modal .modal-body #step-two .heading-row{
-  display: table-row;
-  width: 100%;
-}
 #donate-modal .modal-body #step-two .heading-row{
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
+  padding: 8px 0;
   letter-spacing: 1px;
+  border-bottom: 1px solid #ddd;
 }
 #donate-modal .modal-body #step-two .avreichim-list .avreichim-data span{
   display: block;
@@ -1048,6 +1043,7 @@ Main components
 #donate-modal .modal-body #step-two .avreichim-select,
 #donate-modal .modal-body #step-two .more-info{
   width: 10%;
+  min-width: 50px;
 }
 #donate-modal .modal-body #step-two .avreichim-data{
   width: 50%;
@@ -1062,19 +1058,42 @@ Main components
   font-size: 11px;
   letter-spacing: 1px;
 }
+#donate-modal .modal-body #step-two .avreichim-row{
+  padding:10px 0;
+}
 #donate-modal .modal-body #step-two .avreichim-row:nth-child(odd){
   background: #F9F9F9;
 }
 #donate-modal .modal-body #step-two .cost, #donate-modal .modal-body #step-two .time{
   width: 15%;
 }
-
 #donate-modal .modal-body #step-two .avreichim-info{
   border: 1px solid #ddd;
 }
 #donate-modal .modal-body #step-two .avreichim-info h4{
   text-align: center;
   border-bottom: 1px solid #ddd;
+}
+#donate-modal .modal-body #step-two .info-container{
+  padding:0 20px 20px 20px;
+}
+#donate-modal .modal-body #step-two .info-container ul li{
+  display: inline-block;
+  font-size: 13px;
+}
+#donate-modal .modal-body #step-two .info-container .geo-location{
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+}
+#donate-modal .modal-body #step-two .info-container ul li span{
+  text-transform: uppercase;
+  font-weight: 600;
+}
+#donate-modal .modal-body #step-two .info-container .about-info span{
+  text-transform: uppercase;
+}
+#donate-modal .modal-body #step-two .info-container .about-info p{
+  line-height: 23px;
 }
 @media screen and (min-width: 768px) {
   #tab-opportunities .avreichim-info span{
