@@ -1026,8 +1026,11 @@ Main components
   width: 100%;
 }
 #donate-modal .modal-body #step-two .avreichim-list{
-  border: 1px solid gray;
+  border: 1px solid #DDDDDD;
   text-align: center;
+}
+#donate-modal .modal-body #step-two .avreichim-list h4{
+  border-bottom: 1px solid #DDDDDD;
 }
 #donate-modal .modal-body #step-two .avreichim-row, #donate-modal .modal-body #step-two .heading-row{
   display: table-row;
@@ -1059,9 +1062,19 @@ Main components
   font-size: 11px;
   letter-spacing: 1px;
 }
-
+#donate-modal .modal-body #step-two .avreichim-row:nth-child(odd){
+  background: #F9F9F9;
+}
 #donate-modal .modal-body #step-two .cost, #donate-modal .modal-body #step-two .time{
-width: 15%;
+  width: 15%;
+}
+
+#donate-modal .modal-body #step-two .avreichim-info{
+  border: 1px solid #ddd;
+}
+#donate-modal .modal-body #step-two .avreichim-info h4{
+  text-align: center;
+  border-bottom: 1px solid #ddd;
 }
 @media screen and (min-width: 768px) {
   #tab-opportunities .avreichim-info span{
