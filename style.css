@@ -1015,21 +1015,40 @@ Main components
 }
 
 /* STEP TWO */
+
+
+/* General Modal Styles*/
 #donate-modal .modal-body #step-two{
-  //display: none;
+  display: none;
+}
+
+#donate-modal .modal-body #step-two,
+#donate-modal .modal-body #step-three{
   overflow: auto;
 }
-#donate-modal .modal-body #step-two .boxes-container{
-  margin-top: 30px;
-}
-#donate-modal .modal-body #step-two .avreichim-list{
+#donate-modal .modal-body .list-box{
   border: 1px solid #DDDDDD;
   text-align: center;
 }
-#donate-modal .modal-body #step-two .avreichim-list h4{
-  border-bottom: 1px solid #DDDDDD;
+#donate-modal .modal-body .boxes-container{
+  margin-top: 30px;
 }
-#donate-modal .modal-body #step-two .heading-row{
+#donate-modal .modal-body .list-box .list-table .rows-container{
+  height: 200px;
+  overflow-y: scroll;
+}
+#donate-modal .modal-body .single-row{
+  padding:10px 0;
+}
+#donate-modal .modal-body .single-row:nth-child(odd){
+  background: #F9F9F9;
+}
+#donate-modal .modal-body .list-box h4{
+  border-bottom: 1px solid #DDDDDD;
+  padding: 15px 0;
+  margin: 0;
+}
+#donate-modal .modal-body .heading-row{
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
@@ -1037,13 +1056,43 @@ Main components
   letter-spacing: 1px;
   border-bottom: 1px solid #ddd;
 }
-#donate-modal .modal-body #step-two .avreichim-list .avreichim-data span{
-  display: block;
+#donate-modal .modal-body .heading-row .td-select{
+  text-transform: uppercase;
+  width: 60%;
 }
-#donate-modal .modal-body #step-two .avreichim-select,
-#donate-modal .modal-body #step-two .more-info{
+#donate-modal .modal-body .td-select,
+#donate-modal .modal-body .td-info{
   width: 10%;
   min-width: 50px;
+}
+#donate-modal .modal-body .heading-row .cost,
+#donate-modal .modal-body .heading-row .time{
+  width: 15%;
+}
+#donate-modal .modal-body .cost, 
+#donate-modal .modal-body .time{
+  width: 15%;
+}
+#donate-modal .modal-body .avreichim-info{
+  border: 1px solid #ddd;
+}
+#donate-modal .modal-body .avreichim-info h4{
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  margin: 0;
+}
+#donate-modal .modal-body .info-container{
+  padding:0 20px 20px 20px;
+  height: 240px;
+  overflow-y: scroll;
+}
+
+
+
+
+#donate-modal .modal-body #step-two .list-box .avreichim-data span{
+  display: block;
 }
 #donate-modal .modal-body #step-two .avreichim-data{
   width: 50%;
@@ -1058,25 +1107,6 @@ Main components
   font-size: 11px;
   letter-spacing: 1px;
 }
-#donate-modal .modal-body #step-two .avreichim-row{
-  padding:10px 0;
-}
-#donate-modal .modal-body #step-two .avreichim-row:nth-child(odd){
-  background: #F9F9F9;
-}
-#donate-modal .modal-body #step-two .cost, #donate-modal .modal-body #step-two .time{
-  width: 15%;
-}
-#donate-modal .modal-body #step-two .avreichim-info{
-  border: 1px solid #ddd;
-}
-#donate-modal .modal-body #step-two .avreichim-info h4{
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-#donate-modal .modal-body #step-two .info-container{
-  padding:0 20px 20px 20px;
-}
 #donate-modal .modal-body #step-two .info-container ul li{
   display: inline-block;
   font-size: 13px;
@@ -1084,16 +1114,49 @@ Main components
 #donate-modal .modal-body #step-two .info-container .geo-location{
   border-bottom: 1px solid #ddd;
   padding: 5px 0;
+  margin-bottom: 10px;
 }
 #donate-modal .modal-body #step-two .info-container ul li span{
   text-transform: uppercase;
   font-weight: 600;
 }
+#donate-modal .modal-body #step-two .info-container ul li:first-child:after{
+  content: "|";
+  margin:0 10px;
+  color: #ddd;
+}
 #donate-modal .modal-body #step-two .info-container .about-info span{
   text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+  padding-bottom:3px;
 }
 #donate-modal .modal-body #step-two .info-container .about-info p{
+  margin-top: 20px;
   line-height: 23px;
+}
+#donate-modal .modal-body #step-two .info-container .about-info p:last-child{
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+#donate-modal .modal-body .item{
+  width: 40%;
+  text-align: left;
+  font-weight: 300;
+}
+#donate-modal .modal-body #step-three .avreichim-info .info-container .col-md-2 span{
+  display: inline-block;
+  font-size: 18px;
+}
+
+/* Modal Footer */
+#donate-modal .modal-footer div{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.7px;
+}
+#donate-modal .modal-footer div:nth-child(-n+2){
+  margin-top: 14px;
 }
 @media screen and (min-width: 768px) {
   #tab-opportunities .avreichim-info span{
